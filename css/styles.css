@@ -1,0 +1,229 @@
+/* ===== Base / element selectors ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #1f4e79;
+}
+
+img, video, audio {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #1f4e79;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #ffb400;
+    text-decoration: underline;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: #1f4e79;
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    color: #ffffff;
+    margin: 0 0 0.3rem 0;
+}
+
+/* ===== Navigation ===== */
+nav {
+    background-color: #163a58;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+}
+
+nav a {
+    color: #ffffff;
+    padding: 0.5rem 0.9rem;
+    border-radius: 6px;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #ffb400;
+    color: #163a58;
+    text-decoration: none;
+}
+
+/* ===== Main layout ===== */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Class selector reused across every section: demonstrates the box model */
+.content-section {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border: 1px solid #c7d3dc;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Id selector: one unique section gets its own background */
+#hobbies {
+    background-color: #eef5fb;
+}
+
+/* ===== Photo gallery ===== */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.gallery figure {
+    background-color: #f9fafb;
+    border: 1px solid #dde5eb;
+    border-radius: 10px;
+    padding: 0.6rem;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.gallery figure:hover {
+    transform: translateY(-5px);
+}
+
+.gallery img {
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.gallery figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* ===== Media players ===== */
+#media video,
+#media audio {
+    display: block;
+    margin: 0.75rem 0;
+}
+
+/* ===== Table ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #1f4e79;
+}
+
+th, td {
+    border: 1px solid #c7d3dc;
+    padding: 0.6rem;
+    text-align: left;
+}
+
+th {
+    background-color: #1f4e79;
+    color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f4f8fb;
+}
+
+/* ===== Form ===== */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #b6c2cc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #ffb400;
+    border-color: #ffb400;
+}
+
+button[type="submit"] {
+    background-color: #1f4e79;
+    color: #ffffff;
+    border: none;
+    padding: 0.7rem 1.4rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    background-color: #ffb400;
+    color: #163a58;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    background-color: #163a58;
+    color: #ffffff;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* ===== Responsive: narrow screens ===== */
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .gallery figure {
+        width: 100%;
+    }
+}
